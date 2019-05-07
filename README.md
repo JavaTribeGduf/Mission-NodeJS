@@ -1,5 +1,4 @@
-Mission-NodeJS
-=
+# Mission-NodeJS
 
 本项目旨在以任务的形式，引导初学者学习 Node.js 以及提供给有基础的同学进行查漏补缺。
 
@@ -7,4 +6,4 @@ Mission-NodeJS
 
 任务链一环接一环，强烈建议**不要跳过任何任务**。其中，整数任务是主线，小数点任务是支线。
 
-实在没有思路的时候不妨看看[参考答案](https://github.com/etbox/NodeJS)，或许能从某次commit中找到你想要的答案。
+实在没有思路的时候不妨看看[参考答案](https://github.com/etbox/NodeJS)，或许能从某次 commit 中找到你想要的答案。

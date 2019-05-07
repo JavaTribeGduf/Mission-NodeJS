@@ -1,14 +1,13 @@
-代码规范
-=
+# 代码规范
 
 使用 [ESLint](https://eslint.org/) 来规范代码，推荐风格如下：
 
 1. 字符串使用单引号
 1. 分号只在必要的地方加，如果一个语句或表达式的结尾可加可不加，则不加分号
-    - 不是每条语句都必须加分号，自行了解 ESI(Automatic semicolon insertion)
+   - 不是每条语句都必须加分号，自行了解 ESI(Automatic semicolon insertion)
 1. 提交到 git 的代码统一换行符为 \n，不是 \r\n，也不是\r
-    - 注意编辑器也要同步设置
-    - 也可以配置 git，让其自动转换
+   - 注意编辑器也要同步设置
+   - 也可以配置 git，让其自动转换
 
 接下来动手操作一下，在工作目录下打开命令行，输入以下命令：
 
@@ -34,47 +33,37 @@ $ npx eslint --init
 ```
 
 命令执行后会生成一个规则配置文件，咱们再稍微修改一下
+
 - 将 extends 改为 airbnb-base，比起 eslint:recommended，这个 preset 更加严格
 - 在 rules 里加上 'no-tabs': 0 和 'no-console': 'off'
 
 最后的文件如下
-```
+
+```js
 module.exports = {
-	'env': {
-		'browser': true,
-		'es6': true,
-		'node': true
-	},
-	'extends': 'airbnb-base',
-	'globals': {
-		'Atomics': 'readonly',
-		'SharedArrayBuffer': 'readonly'
-	},
-	'parserOptions': {
-		'ecmaVersion': 2018,
-		'sourceType': 'module'
-	},
-	'rules': {
-		'no-tabs': 0,
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'unix'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'never'
-		],
-		'no-console': 'off',
-	}
-}
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: 'airbnb-base',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  rules: {
+    'no-tabs': 0,
+    indent: ['error', 'tab'],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'no-console': 'off',
+  },
+};
 ```
 
 记得在编辑器上安装相应的 ESLint 插件，不然你会发现编辑器中刚刚设置的 ESLint 没有生效

@@ -1,5 +1,4 @@
-使用 Git & Github
-=
+# 使用 Git & Github
 
 学习使用 Git 的常用命令
 
